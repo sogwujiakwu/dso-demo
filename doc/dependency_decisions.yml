@@ -35,6 +35,12 @@
     :why: 
     :versions: []
     :when: 2020-05-31 15:27:29.688403000 Z
+- - :permit
+  - New BSD
+  - :who:
+    :why:
+    :versions: []
+    :when: 2020-09-29
 - - :approve
   - logback-core
   - :who: 
