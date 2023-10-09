@@ -152,6 +152,7 @@ pipeline {
 /*            container('docker-tools') {
              sh 'docker run -t owasp/zap2docker-stable zap-baseline.py -t $DEV_URL || exit 0'
               } */
+            }
           } 
         }
       }
