@@ -19,6 +19,8 @@ spec:
       labels:
         app: dso-demo
     spec:
+      serviceAccountName: dso-demo
+      automountServiceAccountToken: false
       volumes:
       - name: tmp
         emptyDir: {}
@@ -37,7 +39,7 @@ spec:
           allowPrivilegeEscalation: false
           readOnlyRootFilesystem: true
           runAsNonRoot: true
-          runAsUser: 1000
+          runAsUser: 11000
         volumeMounts:
         - name: tmp
           mountPath: /tmp
