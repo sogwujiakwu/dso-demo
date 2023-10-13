@@ -17,6 +17,9 @@ spec:
       labels:
         app: dso-demo
     spec:
+      volumes:
+      - name: tmp
+        emptyDir: {}
       containers:
       - image: devopsogwujiakwu/dso-demo
         name: dso-demo
@@ -28,8 +31,12 @@ spec:
             - ALL
           privileged: false
           allowPrivilegeEscalation: false
+          readOnlyRootFilesystem: true
           runAsNonRoot: true
           runAsUser: 1000
+        volumeMounts:
+        - name: tmp
+          mountPath: /tmp
         resources:
           requests:
             cpu: "50m"
